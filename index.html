@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script>
+const password = prompt("クラスコードを入力してください");
+if(password !== "hokuto2026"){
+  document.body.innerHTML = "<h2>アクセスできません</h2>";
+}
+</script>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  try {
+    if (typeof password !== "undefined" && password !== "hokuto2026") {
+      document.body.innerHTML = "<h2>アクセスできません</h2>";
+    }
+  } catch (e) {}
+});
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>超頻出語句クイズ（No.301-400）</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Vocabulary Quiz</p>
+        <h1>超頻出語句クイズ（No.301-400）</h1>
+        <p class="subtle">開始番号と終了番号を指定して、4択で学習できます。</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="menuScreen" class="card screen active">
+        <h2>出題設定</h2>
+        <div class="settings-grid">
+          <label class="field">
+            <span>開始番号</span>
+            <input id="startNumber" type="number" min="301" max="400" value="301" />
+          </label>
+          <label class="field">
+            <span>終了番号</span>
+            <input id="endNumber" type="number" min="301" max="400" value="400" />
+          </label>
+        </div>
+
+        <div class="mode-group">
+          <p class="mode-label">出題順</p>
+          <div class="mode-buttons" role="group" aria-label="出題順">
+            <button id="orderedBtn" class="mode-btn active" data-mode="ordered" type="button">順番通り</button>
+            <button id="randomBtn" class="mode-btn" data-mode="random" type="button">ランダム</button>
+          </div>
+        </div>
+
+        <div class="menu-actions">
+          <button id="startQuizBtn" class="primary-btn" type="button">クイズを開始</button>
+        </div>
+
+        <div class="menu-note">
+          <p>対象語：B列通し番号 301〜400（professor 〜 concept）</p>
+          <p>各問題は即時フィードバックつきです。</p>
+        </div>
+      </section>
+
+      <section id="quizScreen" class="card screen" aria-live="polite">
+        <div class="quiz-topbar">
+          <div>
+            <p id="progressText" class="progress-text">1 / 100</p>
+            <p id="scoreText" class="score-text">正解 0 / 0</p>
+          </div>
+          <div class="topbar-actions">
+            <button id="menuBackBtnTop" class="ghost-btn" type="button">メニューに戻る</button>
+          </div>
+        </div>
+
+        <div class="word-panel">
+          <div class="word-line">
+            <h2 id="wordText">adult</h2>
+            <button id="speakBtn" class="sound-btn" type="button" aria-label="音声再生">🔊</button>
+          </div>
+          <p id="wordNoText" class="word-no">単語番号: 226</p>
+        </div>
+
+        <div id="choicesWrap" class="choices-wrap"></div>
+
+        <div id="feedbackPanel" class="feedback-panel hidden">
+          <p id="resultBadge" class="result-badge">正解！</p>
+          <p id="correctAnswerText" class="correct-answer"></p>
+          <div class="example-box">
+            <p class="example-label">Example</p>
+            <p id="exampleText" class="example-text"></p>
+            <p id="translationText" class="translation-text"></p>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button id="prevBtn" class="secondary-btn" type="button">前へ</button>
+          <button id="nextBtn" class="primary-btn" type="button">次へ</button>
+        </div>
+
+        <div class="utility-actions">
+          <button id="restartSameBtn" class="ghost-btn" type="button">同条件でリスタート</button>
+          <button id="restartNewBtn" class="ghost-btn" type="button">別範囲でやり直し</button>
+          <button id="menuBackBtnBottom" class="ghost-btn" type="button">メニューに戻る</button>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="card screen">
+        <h2>結果</h2>
+        <p id="finalScoreText" class="final-score"></p>
+        <p id="finalRateText" class="final-rate"></p>
+        <div class="result-actions">
+          <button id="restartSameResultBtn" class="primary-btn" type="button">同条件でリスタート</button>
+          <button id="restartNewResultBtn" class="secondary-btn" type="button">別範囲でやり直し</button>
+          <button id="menuBackBtnResult" class="ghost-btn" type="button">メニューに戻る</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>本教材は授業内利用を目的とした補助教材です。</p>
+      <p>市販教材を参考にしていますが、例文・表現は独自に作成しています。</p>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

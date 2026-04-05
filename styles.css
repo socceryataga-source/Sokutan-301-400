@@ -1,0 +1,389 @@
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #d8dee9;
+  --primary: #2f5da8;
+  --primary-dark: #224885;
+  --accent: #d7e4fb;
+  --correct: #0f8a5f;
+  --correct-bg: #e9f8f1;
+  --wrong: #c13c3c;
+  --wrong-bg: #fff0f0;
+  --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: linear-gradient(180deg, #eef3fb 0%, #f7f9fc 100%);
+  color: var(--ink);
+}
+
+.page-shell {
+  width: min(920px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.site-header {
+  margin-bottom: 18px;
+  padding: 8px 4px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.subtle {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(47, 93, 168, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field span {
+  font-weight: 600;
+}
+
+input[type="number"] {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  background: #fbfcff;
+}
+
+.mode-group {
+  margin-top: 18px;
+}
+
+.mode-label {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.mode-buttons,
+.menu-actions,
+.nav-actions,
+.utility-actions,
+.result-actions,
+.topbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mode-btn,
+.primary-btn,
+.secondary-btn,
+.ghost-btn,
+.choice-btn,
+.sound-btn {
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  font-size: 1rem;
+}
+
+.mode-btn {
+  background: #eef2f9;
+  color: var(--ink);
+  padding: 12px 18px;
+  border: 1px solid transparent;
+}
+
+.mode-btn.active {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border-color: rgba(47, 93, 168, 0.2);
+  font-weight: 700;
+}
+
+.primary-btn,
+.secondary-btn,
+.ghost-btn {
+  padding: 12px 18px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+}
+
+.secondary-btn {
+  background: #e8eef8;
+  color: var(--primary-dark);
+}
+
+.ghost-btn {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.menu-actions {
+  margin-top: 22px;
+}
+
+.menu-note {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.quiz-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.progress-text,
+.score-text,
+.word-no,
+.example-label,
+.final-rate {
+  margin: 0;
+  color: var(--muted);
+}
+
+.score-text {
+  margin-top: 4px;
+}
+
+.word-panel {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #e3ebf9;
+}
+
+.word-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.word-line h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 5vw, 2.2rem);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.sound-btn {
+  width: 44px;
+  height: 44px;
+  background: #e7f0ff;
+  border: 1px solid #d4e2fb;
+  flex-shrink: 0;
+}
+
+.choices-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.choice-btn {
+  text-align: left;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  min-height: 64px;
+  font-weight: 600;
+}
+
+.choice-btn:hover:not(:disabled),
+.mode-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover,
+.ghost-btn:hover,
+.sound-btn:hover {
+  transform: translateY(-1px);
+}
+
+.choice-btn.correct {
+  background: var(--correct-bg);
+  border-color: rgba(15, 138, 95, 0.35);
+  color: var(--correct);
+}
+
+.choice-btn.wrong {
+  background: var(--wrong-bg);
+  border-color: rgba(193, 60, 60, 0.35);
+  color: var(--wrong);
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.feedback-panel {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #e6edf8;
+  background: #fbfdff;
+}
+
+.feedback-panel.hidden {
+  display: none;
+}
+
+.result-badge {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.result-badge.correct {
+  color: var(--correct);
+  background: var(--correct-bg);
+}
+
+.result-badge.wrong {
+  color: var(--wrong);
+  background: var(--wrong-bg);
+}
+
+.correct-answer {
+  margin: 0 0 14px;
+  font-weight: 700;
+}
+
+.example-box {
+  border-top: 1px dashed #d8e2f0;
+  padding-top: 14px;
+}
+
+.example-text {
+  margin: 6px 0 10px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.translation-text {
+  margin: 0;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.nav-actions,
+.utility-actions,
+.result-actions {
+  margin-top: 18px;
+}
+
+.final-score {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  margin: 6px 0 10px;
+}
+
+.site-footer {
+  margin-top: 18px;
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 16px, 920px);
+    padding-top: 16px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .settings-grid,
+  .choices-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .word-line {
+    align-items: flex-start;
+  }
+
+  .word-line h2 {
+    font-size: 1.9rem;
+  }
+
+  .choice-btn {
+    min-height: 58px;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .ghost-btn,
+  .mode-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
