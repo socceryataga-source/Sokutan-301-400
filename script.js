@@ -1,3 +1,6 @@
+if (!window.__authOK) {
+  // 誤入力・空欄・キャンセル時はクイズ初期化を行わない
+} else {
 const menuScreen = document.getElementById("menuScreen");
 const quizScreen = document.getElementById("quizScreen");
 const resultScreen = document.getElementById("resultScreen");
@@ -261,3 +264,5 @@ menuBackButtons.forEach((button) => {
 
 showScreen(menuScreen);
 setMode("ordered");
+
+}
