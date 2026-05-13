@@ -181,7 +181,7 @@ const WORD_DATA = [
     "answer": "進化する",
     "options": [
       "寂しく思う",
-      "人供給するfor",
+      "供給する",
       "進化する",
       "許す"
     ],
@@ -407,7 +407,7 @@ const WORD_DATA = [
       "気づいて",
       "活動的な、活発な",
       "ありそうな",
-      "～で有名なfor"
+      "～で有名な"
     ],
     "example": "Kyoto is famous for its historical buildings.",
     "translation": "京都は歴史的な建築物で有名だ。"
@@ -476,7 +476,7 @@ const WORD_DATA = [
     "options": [
       "進化する",
       "議論する",
-      "損害与える",
+      "損害を与える",
       "勧める"
     ],
     "example": "The storm did a lot of damage to the trees in the park.",
@@ -852,7 +852,7 @@ const WORD_DATA = [
     "word": "due",
     "answer": "到着予定で",
     "options": [
-      "～で有名なfor",
+      "〜ごとに",
       "気づいて",
       "到着予定で",
       "学問の"
@@ -897,7 +897,7 @@ const WORD_DATA = [
       "特定する",
       "寂しく思う",
       "無視する",
-      "人供給するfor"
+      "固定する"
     ],
     "example": "The police finally identified the cause of the fire.",
     "translation": "警察はついにその火事の原因を特定した。"
@@ -911,7 +911,7 @@ const WORD_DATA = [
       "かなり",
       "気づいて",
       "活動的な、活発な",
-      "～で有名なfor"
+      "きれいな"
     ],
     "example": "I did pretty well in the interview.",
     "translation": "私は面接でかなりうまくやった。"
@@ -1036,7 +1036,7 @@ const WORD_DATA = [
     "options": [
       "都市の",
       "ありそうな",
-      "～で有名なfor",
+      "田舎の",
       "気づいて"
     ],
     "example": "We decided to move to an urban area rather than live in the countryside.",
@@ -1077,7 +1077,7 @@ const WORD_DATA = [
     "answer": "約束する",
     "options": [
       "約束する",
-      "～答えるto",
+      "借金をする",
       "観察する",
       "防ぐ"
     ],
@@ -1105,9 +1105,9 @@ const WORD_DATA = [
     "answer": "維持する",
     "options": [
       "購入する",
-      "人供給するfor",
+      "主な",
       "維持する",
-      "～答えるto"
+      "批判する"
     ],
     "example": "The new teacher found it hard to maintain discipline in the class.",
     "translation": "新任の教師はクラスの規律を維持するのが難しいと感じていた。"
@@ -1245,7 +1245,7 @@ const WORD_DATA = [
     "answer": "気づいて",
     "options": [
       "気づいて",
-      "～で有名なfor",
+      "遠くへ",
       "一般的な",
       "金融の"
     ],
@@ -1328,7 +1328,7 @@ const WORD_DATA = [
     "word": "achieve",
     "answer": "達成する",
     "options": [
-      "雇う",
+      "到着する",
       "許す",
       "無視する",
       "達成する"
@@ -1340,10 +1340,10 @@ const WORD_DATA = [
     "serial": 396,
     "wordNo": "1225",
     "word": "provide",
-    "answer": "人供給するfor",
+    "answer": "供給する",
     "options": [
       "維持する",
-      "人供給するfor",
+      "供給する",
       "設計する",
       "関係がある"
     ],
@@ -1368,12 +1368,12 @@ const WORD_DATA = [
     "serial": 398,
     "wordNo": "1228",
     "word": "respond",
-    "answer": "～答えるto",
+    "answer": "～に答える",
     "options": [
       "設計する",
       "気づく",
       "住所",
-      "～答えるto"
+      "～に答える"
     ],
     "example": "I didn't know how to respond to the questions from the media.",
     "translation": "メディアからの質問にどう答えればよいかわからなかった。"
